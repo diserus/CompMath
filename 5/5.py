@@ -2,11 +2,11 @@ def lagrange(xArr,yArr,point):
     n = len(xArr)
     result = 0
     for i in range(n):
-        term = yArr[i]
+        Li = yArr[i]
         for j in range(n):
             if j!=i:
-                term*=(point-xArr[j])/(xArr[i]-xArr[j]) #строим базисный полином
-        result+=term
+                Li*=(point-xArr[j])/(xArr[i]-xArr[j]) 
+        result+=Li
     return result
 if __name__=='__main__':
     x = [1, 2, 3, 4]
